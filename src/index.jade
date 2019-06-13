@@ -1,0 +1,282 @@
+include ./blocks/slide.jade
+include ./blocks/cover.jade
+include ./blocks/quote.jade
+include ./blocks/frame.jade
+
+- var title = "Как перестать выбирать фреймворки и&nbsp;начать жить"
+
+doctype html
+html(lang='ru')
+  head
+    title !{title}
+    meta(charset='utf-8')
+    meta(http-equiv='x-ua-compatible', content='ie=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    link(rel='stylesheet', href='shower/themes/ribbon/styles/screen-16x9.css')
+    link(rel='stylesheet', href='theme.css')
+    link(rel='stylesheet', href='slides.css')
+  body.shower.list
+    header.caption
+      h1 !{title}
+    +slide({name: 'cover', header: title, classes:'cover'})
+      p Александра Шинкевич (
+        a(href='https://twitter.com/neesoglasnaja' target="_blank") @neesoglasnaja
+        | )
+      +cover('pictures/cover.jpg')
+    +slide({header: "", classes: ""})
+      div(style="margin-left: 50%; width: 60%; font-size: 0.8em")
+        h2 Кто я?
+        ul
+          li.next Верстала еще на таблицах
+          li.next jQuery, VanillaJS, AngularJS, React, Angular и Vue.js
+          li.next И Node.js
+          li.next Была начальником отдела фронтенда
+          li.next Выгорела
+          li.next Уволилась и счастливая безработная
+        p(style="margin-top: 70px")
+          img.logo(src="pictures/minskcss.png")
+          img.logo(src="pictures/minskjs.png")
+          img.logo(src="pictures/css-minsk-js.svg", style="background-color: #2b2727; height: 75px")
+      +cover('pictures/about-cover.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/frameworks.jpg')
+      img(src="pictures/confused.gif", style="position: absolute; left: 30%; bottom: -10%; width: 500px")
+    +slide({header: "", classes: "no-page"})
+      +cover('pictures/bullet.jpg')
+      +cover('pictures/no.png', 'next')
+    +slide({header: "Что еще можно сказать про фреймворки?", classes: ""})
+      ul
+        li Обзор платформы, пересказ документации
+        li Архитектура инструмента, хардкор
+        li Рассказ о библиотеках экосистемы
+        li Как мы переехали с инструмента А на инструмент Б и выжили
+        li How-to, best practices или примеры из жизни 
+      ul
+        li.next Сравнить фреймворки
+      img.next(src="pictures/lol_no.gif", style="position: absolute; bottom: 0; right: 0; width: 300px;")
+    +slide({header: "", classes: "no-page"})
+      img.cover(src='pictures/inspiration.gif', style="width: 100%")
+    +slide({header: "", classes: "no-page"})
+      a.copyright(href="https://www.youtube.com/watch?v=xPFRUM_oDKA") Andrey Listochkin — Anti hype как не гнаться за технологиями и начать жить
+      +cover('pictures/listochkin.jpg')
+    +slide({header: "", classes: ""})
+      a.copyright(href="https://www.youtube.com/watch?v=p5g4giWmcvE") Алексей Симоменко — Как я перестал верить технологиям
+      +cover('pictures/simonenko.jpg')
+    +slide({header: "", classes: "no-page"})
+      a.copyright(href="https://www.youtube.com/watch?v=jPbqeSSDuug") Евгений (Гусев) Кот — Лебедь рак и щука: как технологии тянут фронтенд на дно
+      +cover('pictures/kot.jpg')
+    +slide({header: "", classes: "no-page"})
+      a.copyright(href="https://www.youtube.com/watch?v=MzTng78DCm4") Максим Юзва — Мерцание технологий, или Инжиниринг 21-го века
+      +cover('pictures/yuzva.jpg')
+    +slide({header: "", classes: "no-page"})
+      a.copyright(href="https://www.youtube.com/watch?v=jzaZlEOSwoA") Илья Климов — JavaScript: День 4001-й
+      +cover('pictures/klimov.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/tears.jpg')
+    +slide({header: "", classes: "no-page"})
+      h2(style="position: absolute; top: 25%; right: 10%; color: #0d1a0a") Что не так с JavaScript?
+      +cover('pictures/philosoraptor.jpg')
+    +slide({header: "Претензия 1. Плохой язык", classes: ""})
+      +cover('pictures/fake_js_logo.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/true_is_false.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/esnext.jpg')
+    +slide({header: "", classes: "no-page"})
+      a.copyright(href="https://kangax.github.io/compat-table/es2016plus/") ECMAScript 2016+ compatibility table
+      +cover('pictures/features.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/other_languages.jpg')
+    +slide({header: "", classes: "no-page"})
+      +cover('pictures/backend.jpg')
+    +slide({header: "", classes: ""})
+      a.copyright(href="http://frontendconf.ru/moscow-rit/2019/abstracts/4775") Андрей Смирнов — Почему не надо становиться руководителем
+      +cover('pictures/teamleads.jpg')
+    +slide({header: "", classes: ""})
+      h2(style="color: #fff; position: absolute; top: 35%; right: 10%; text-shadow: 0 0 10px #000, 0 0 20px #000") Претензия 2.<br>Много инструментов
+      +cover('pictures/too_much.jpg')
+    +slide({header: "", classes: "no-page"})
+      a.copyright(href="https://hackernoon.com/how-it-feels-to-learn-javascript-in-2016-d3a717dd577f") How it feels to learn JavaScript in 2016
+      +cover('pictures/insane.jpg')
+    +slide({header: "", classes: ""})
+      img.cover(src="pictures/competition.gif", style="width: 100%")
+    +slide({header: "Претензия 3. Много велосипедов", classes: ""})
+      +cover('pictures/suffer.jpg')
+    +slide({header: "", classes: ""})    
+      +cover('pictures/velo.jpg')
+    +slide({header: "", classes: "no-page"})
+      +cover('pictures/npm.jpg')
+    +slide({header: "Претензия 4. Все быстро меняется", classes: ""})
+      +cover('pictures/speed.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/web.jpg')
+    +slide({header: "", classes: "no-page"})
+      +cover('pictures/ecosystem.jpg')
+    +slide({header: "", classes: ""})
+      img.cover(src="pictures/banana.gif", style="width: 100%")
+    +slide({header: "", classes: "no-page"})
+      +cover('pictures/legacy.jpg')
+    +slide({header: "", classes: ""})
+      a.copyright(href="https://medium.com/dev-channel/a-netflix-web-performance-case-study-c0bcde26a9d9") A Netflix Web Performance Case Study
+      +cover('pictures/netflix.jpg')
+    +slide({header: "Претензия 5. Длинная кривая обучения", classes: ""})
+      a.copyright(href="https://github.com/kamranahmedse/developer-roadmap#frontend-roadmap") Web Developer Roadmap
+      +cover('pictures/long_way.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/experience.jpg')
+    +slide({header: "", classes: ""})
+      a.copyright(href="https://2018.stateofjs.com/javascript-flavors/overview/") State of JavaScript — JavaScript Flavours
+      +cover('pictures/happiness.jpg')
+    +slide({header: "", classes: "no-page"})
+      img.cover(src="pictures/good.gif", style="width: 100%; max-height: none;")
+    +slide({header: "", classes: "no-page"})
+      +cover('pictures/deeper.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/hard.jpg')
+    +slide({header: "Факт 1. В браузере только HTML, CSS и JS", classes: ""})
+      +cover('pictures/browser.jpg')
+    +slide({header: "", classes: "no-page"})
+      img.cover(src="pictures/candy.gif", style="width: 100%; max-height: none;")
+    +slide({header: "", classes: ""})
+      +cover('pictures/ugly.jpg')
+    +slide({header: "", classes: ""})
+      div(style="text-align: center; margin-top: 100px; font-size: 30px")
+        p Чему в JavaScript будет равен  
+          span(style="font-family: monospace") i
+          |  после выполнения
+        pre(style="font-family: monospace;  font-size: 45px; display: inline-block; background-color: #ddd; padding: 10px 30px") var i = 5; i = ++i + ++i;
+    +slide({header: "", classes: ""})
+      a.copyright(href="https://github.com/getify/You-Dont-Know-JS") You Don't Know JS (book series)
+      +cover('pictures/know.jpg')
+    +slide({header: "Факт 2. Чтобы быть крутым фронтендером, надо много знать", classes: ""})
+      +cover('pictures/bad.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/path.jpg')
+    +slide({header: "", classes: "no-page"})
+      +cover('pictures/free.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/job.jpg')
+    +slide({header: "", classes: "no-page"})
+      img.cover(src="pictures/junior.gif", style="width: 100%; max-height: none;")
+    +slide({header: "", classes: "no-page"})
+      img.cover(src="pictures/middle.gif", style="width: 100%; max-height: none;")
+    +slide({header: "", classes: "no-page"})
+      img.cover(src="pictures/no_thanks.gif", style="width: 100%; max-height: none;")
+    +slide({header: "", classes: "no-page"})
+      img.cover(src="pictures/lead.gif", style="width: 100%; max-height: none;")
+    +slide({header: "", classes: "black"})
+      img.cover(src="pictures/avocado.gif", style="height: 100%; max-width: none;")
+    +slide({header: "Факт 3. Разработчики не смотрят \"под капот\"", classes: ""})
+      +cover('pictures/scared.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/clients.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/swift-tweet.jpg')
+    +slide({header: "", classes: "no-page"})
+      img.cover(src="pictures/explosion.gif", style="width: 100%; max-height: none;")
+    +slide({header: "", classes: ""})
+      +cover('pictures/history.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/netscape.gif')
+    +slide({header: "", classes: ""})
+      +cover('pictures/wars.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/jquery.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/dead.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/vanilla.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/bootstrap.jpg')
+    +slide({header: "*Простые приложения", classes: ""})
+      +cover('pictures/period_1.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/soc.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/mv.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/angularjs.jpg')
+    +slide({header: "", classes: "no-page"})
+      a.copyright(href="https://www.youtube.com/watch?v=r1A1VR0ibIQ") Miško Hevery and Brad Green — Keynote
+      +cover('pictures/google_feedback.jpg')
+    +slide({header: "", classes: "no-page"})
+      +cover('pictures/spongebob.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/knockout.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/backbone.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/ember.jpg')
+    +slide({header: "", classes: "no-page"})
+      +cover('pictures/ambitions.jpg')
+    +slide({header: "*Монолит", classes: ""})
+      +cover('pictures/period_2.jpg')
+    +slide({header: "", classes: ""})
+      img.cover(src="pictures/slow.gif", style="height: 100%; max-width: none;")
+    +slide({header: "", classes: ""})
+      +cover('pictures/react.jpg')
+    +slide({header: "", classes: ""})
+      a.copyright(href="https://github.com/adam-golab/react-developer-roadmap") React Developer Roadmap
+      +cover('pictures/react_way.jpg')
+    +slide({header: "", classes: ""})
+      img.cover(src="pictures/castle.gif", style="width: 100%; max-height: none;")
+    +slide({header: "", classes: ""})
+      img.cover(src="pictures/zombi.gif", style="width: 100%; max-height: none;")
+    +slide({header: "", classes: ""})
+      +cover('pictures/vue.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/angular.jpg')
+    +slide({header: "*Модульность", classes: ""})
+      +cover('pictures/period_3.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/polymer.jpg')
+    +slide({header: "Что нужно от современного фреймворка?", classes: ""})
+      ul
+        li Компонентность
+        li.next Модульность
+        li.next Расширяемость
+        li.next Производительность
+        li.next SEO
+        li.next Хороший DX
+      +cover('pictures/want.jpg')
+    +slide({header: "Выбирай любой!", classes: "", shout: true})
+    +slide({header: "Как выбирать", classes: ""})
+      ul
+        li Оценить знания и опыт команды
+        li.next Сложность проекта и технические требования
+        li.next Сроки
+    +slide({header: "", classes: ""})
+      +cover('pictures/quasar_ionic.jpg')
+    +slide({header: "", classes: ""})
+      +cover('pictures/community.jpg')
+    +slide({header: "Подводя итог", classes: ""})
+      ul
+        li Важен бизнес и его цели
+        li.next Важны знания основ, парадигм и концепций
+        li.next Важен баланс и здравый смысл
+        li.next Не прекращайте учиться
+    +slide({header: "", classes: ""})
+      h2(style="color: #eee") P.S. А что выбрать, если...
+      a.copyright(href="https://www.youtube.com/watch?v=dyp91AzmJeU") Илья Таратухин, Евгений Кот - Бешеные псы, сезон 2: React vs. Vue
+      +cover('pictures/mad_dogs.jpg')
+    +slide({header: "", classes: ""})
+      a.copyright(href="https://medium.freecodecamp.org/a-realworld-comparison-of-front-end-frameworks-with-benchmarks-2019-update-4be0d3c78075") RealWorld Comparison
+      +cover('pictures/realworld.jpg')
+    +slide({header: "", classes: "no-page"})
+      +cover('pictures/bullet.jpg')
+      +cover('pictures/no.png')
+    +slide({header: "", classes: ""})
+      h2(style="color: #eee") P.P.S.
+      p(style="display: inline-block; background-color: #000; color: #fff; margin-top: 115px; font-size: 90px; padding: 30px; line-height: 1.2;") Фреймворки — это&nbsp;чужой&nbsp;говнокод
+      +cover('pictures/evil.jpg')
+    +slide({name: 'theend', header: "", classes: ''})
+      p.end-link(style="position: absolute; bottom: 5%")
+        a.bigger(href="http://bit.ly/tver.io-frameworks" target="_blank") bit.ly/tver.io-frameworks
+        br
+        | Александра Шинкевич (
+        a(href='https://twitter.com/neesoglasnaja' target="_blank") @neesoglasnaja
+        | )
+      img.cover(src='pictures/the_end.gif', style="min-height: 240%; max-width: none")
+
+    .progress
+    script(src='shower/shower.min.js')

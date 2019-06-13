@@ -1,0 +1,33 @@
+{
+    "name": "FrontendConf2019",
+    "version": "1.0.0",
+    "description": "Presentation slides",
+    "author": "Aleksandra Shinkevich",
+    "homepage": "https://github.com/neesoglasnaja/FrontendConf2019",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/neesoglasnaja/FrontendConf2019.git"
+    },
+    "scripts": {
+        "start": "./node_modules/.bin/gulp"
+    },
+    "devDependencies": {
+        "autoprefixer": "^7.1.2",
+        "browser-sync": "^2.14.0",
+        "gulp": "^4.0.0",
+        "gulp-autoprefixer": "^5.0.0",
+        "gulp-csso": "^3.0.1",
+        "gulp-help-doc": "^1.1.0",
+        "gulp-htmlmin": "^4.0.0",
+        "gulp-if": "^2.0.2",
+        "gulp-jade": "^1.1.0",
+        "gulp-notify": "^3.2.0",
+        "gulp-sourcemaps": "^2.6.4",
+        "gulp-stylus": "^2.3.0",
+        "gulp-uglify": "^3.0.0",
+        "gulp-util": "^3.0.8",
+        "path-exists-cli": "^1.0.0",
+        "postcss-csso": "^2.0.0",
+        "require-dir": "^1.0.0"
+    }
+}
