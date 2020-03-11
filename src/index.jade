@@ -34,7 +34,7 @@ html(lang='ru')
           li.next Выгорела
           li.next Уволилась и 6 месяцев не работала
           li.next Lead Frontend Developer в Expert Soft
-        p(style="margin-top: 70px")
+        p(style="margin-top: 50px")
           img.logo(src="pictures/minskcss.png")
           img.logo(src="pictures/minskjs.png")
           img.logo(src="pictures/css-minsk-js.svg", style="background-color: #2b2727; height: 75px")
@@ -45,7 +45,7 @@ html(lang='ru')
     +slide({header: "", classes: "no-page"})
       +cover('pictures/bullet.jpg')
       +cover('pictures/no.png', 'next')
-    +slide({header: "Что еще можно сказать про фреймворки?", classes: ""})
+    +slide({header: "Что ещё можно сказать про фреймворки?", classes: ""})
       ul
         li Обзор платформы, пересказ документации
         li Архитектура инструмента, хардкор
@@ -277,7 +277,23 @@ html(lang='ru')
       +cover('pictures/bullet.jpg')
       +cover('pictures/no.png')
     +slide({header: "", classes: ""})
-      h2(style="color: #eee") P.P.S.
+      h2(style="color: #fff") P.P.S.
+      +cover('pictures/webassembly.jpg')
+    +slide({header: "", classes: ""})
+      a.copyright(href="https://github.com/appcypher/awesome-wasm-langs") Awesome WebAssembly Languages
+      +cover('pictures/wasm.jpg')
+    +slide({header: "Фронтенд  - это еще и...", classes: ""})
+      ul
+        li Бэкенд на Node.js
+        li.next Мобильная разработка на ReactNative/Ionic/Quasar/...
+        li.next Progressive Web Applications (PWA)
+        li.next Десктопные приложения на Electron
+        li.next 3D-моделирование на WebGL
+        li.nextИ да, в 
+          a(href="https://habr.com/ru/post/374131/" target="_blank") браузере можно майнить
+          | !
+    +slide({header: "", classes: ""})
+      h2(style="color: #eee") P.P.P.S.
       p(style="display: inline-block; background-color: #000; color: #fff; margin-top: 115px; font-size: 90px; padding: 30px; line-height: 1.2;") Фреймворки — это&nbsp;чужой&nbsp;говнокод
       +cover('pictures/evil.jpg')
     +slide({name: 'theend', header: "", classes: ''})
